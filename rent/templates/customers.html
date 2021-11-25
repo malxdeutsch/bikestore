@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% for customer in all_customers %}
+
+<h3>{{customer.first_name}}</h3>
+<h3>{{customer.last_name}}</h3>
+<h3>{{customer.email}}</h3>
+<h3>{{customer.phone_number}}</h3>
+<h3>{{customer.address}}</h3>
+<h3>{{customer.city}}</h3>
+<h3>{{customer.country}}</h3>
+<hr>
+
+{% endfor %}
+
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+{% for rental in all_rentals%}
+
+<h3>{{rental.rental_date}}</h3>
+<h3>{{rental.return_date}}</h3>
+<h3>{{rental.customer}}</h3>
+<h3>{{rental.vehicle}}</h3>
+<hr>
+{% endfor %}
+
+
+{% endblock %}

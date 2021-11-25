@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% for vehicle in all_vehicles %}
+
+<h3>{{vehicle.type}}</h3>
+<h3>{{vehicle.date_created}}</h3>
+<h3>{{vehicle.real_cost}}</h3>
+<h3>{{vehicle.size}}</h3>
+
+<hr>
+
+{% endfor %}
+
+{% endblock %}
