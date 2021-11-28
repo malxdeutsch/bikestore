@@ -7,8 +7,8 @@ def rental (request):
     all_rentals = Rental.objects.all().order_by('return_date')
     return render (request, 'rental.html', {'all_rentals': all_rentals})
 
-def rental_id (request, rental_id):
-    one_rental = Rental.objects.get (id = rental_id)
+def rental_id (request, rentals_id):
+    one_rental = Rental.objects.get (id = rentals_id)
     return render (request, 'one_rental.html', {'one_rental': one_rental})
 
 def rental_add (request):
@@ -24,8 +24,8 @@ def rental_add (request):
         form = RentalForm()
         return render(request, 'add_rental.html', {'form': form})
 
-def customer_id (request, customer_id):
-    one_customer = Rental.objects.get (customer_id = customer_id)
+def customer_id (request, customers_id):
+    one_customer = Customer.objects.get (id= customers_id)
     return render (request, 'one_customer.html', {'one_customer': one_customer})
 
 def customer (request):
@@ -44,8 +44,8 @@ def vehicle (request):
     all_vehicles = Vehicle.objects.all().order_by('vehicle_type')
     return render (request, 'vehicle.html', {'all_vehicles': all_vehicles})
 
-def vehicle_id (request, vehicle_id):
-    one_vehicle = Vehicle.objects.get (vehicle_id = vehicle_id)
+def vehicle_id (request, vehicles_id):
+    one_vehicle = Vehicle.objects.get (id = vehicles_id)
     return render (request, 'one_vehicle.html', {'one_vehicle': one_vehicle})
 
 def vehicle_add (request):
